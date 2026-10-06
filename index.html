@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#000000">
@@ -882,6 +884,11 @@ const cal = inner => `<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" heig
   renderBar();
   applyAppearance();
 })();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js");
+}
 </script>
 </body>
 </html>
